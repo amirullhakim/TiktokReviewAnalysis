@@ -1,4 +1,3 @@
-````markdown
 # TikTok Google Play Store Review Sentiment Analysis
 
 This project analyses TikTok Google Play Store reviews using Natural Language Processing. It classifies reviews into positive, neutral and negative sentiment, compares SVM, GRU and BERT, and identifies the main TikTok features linked to user complaints.
@@ -63,15 +62,11 @@ BERT achieved the best classification result, while SVM had the fastest training
 
 Install the required libraries in Google Colab:
 
-```python
 !pip install -q pandas numpy scikit-learn nltk spacy tensorflow torch transformers datasets evaluate wordcloud seaborn matplotlib google-play-scraper langdetect contractions pyspellchecker
-```
 
 Install the spaCy English model:
 
-```python
 !python -m spacy download en_core_web_sm
-```
 
 ## Running in Google Colab
 
@@ -81,31 +76,24 @@ Open the project notebook in Google Colab.
 
 ### 2. Mount Google Drive
 
-```python
 from google.colab import drive
 
 drive.mount("/content/drive")
-```
 
 ### 3. Change the Project Path
 
 Change `DRIVE_PATH` to the folder where the project files will be saved.
 
-```python
 DRIVE_PATH = "/content/drive/MyDrive/SMC_Project"
-```
 
 For example, if the Google Drive folder is named `TikTok_Sentiment_Project`:
 
-```python
 DRIVE_PATH = "/content/drive/MyDrive/TikTok_Sentiment_Project"
-```
 
 The folder name must match the actual folder in Google Drive.
 
 ### 4. Define the Phase Folders
 
-```python
 import os
 
 PHASE_01_DIR = os.path.join(DRIVE_PATH, "phase_01_data_collection")
@@ -120,11 +108,9 @@ PHASE_09_DIR = os.path.join(DRIVE_PATH, "phase_09_model_evaluation")
 PHASE_10_DIR = os.path.join(DRIVE_PATH, "phase_10_opinion_mining")
 PHASE_11_DIR = os.path.join(DRIVE_PATH, "phase_11_absa")
 PHASE_12_DIR = os.path.join(DRIVE_PATH, "phase_12_visualization")
-```
 
 ### 5. Create the Folders
 
-```python
 phase_directories = [
     PHASE_01_DIR,
     PHASE_02_DIR,
@@ -142,7 +128,6 @@ phase_directories = [
 
 for folder in phase_directories:
     os.makedirs(folder, exist_ok=True)
-```
 
 ### 6. Run the Notebook
 
