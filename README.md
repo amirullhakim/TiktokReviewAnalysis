@@ -92,44 +92,7 @@ DRIVE_PATH = "/content/drive/MyDrive/TikTok_Sentiment_Project"
 
 The folder name must match the actual folder in Google Drive.
 
-### 4. Define the Phase Folders
-
-import os
-
-PHASE_01_DIR = os.path.join(DRIVE_PATH, "phase_01_data_collection")
-PHASE_02_DIR = os.path.join(DRIVE_PATH, "phase_02_data_cleaning")
-PHASE_03_DIR = os.path.join(DRIVE_PATH, "phase_03_data_preprocessing")
-PHASE_04_DIR = os.path.join(DRIVE_PATH, "phase_04_eda")
-PHASE_05_DIR = os.path.join(DRIVE_PATH, "phase_05_sentiment_labeling")
-PHASE_06_DIR = os.path.join(DRIVE_PATH, "phase_06_data_split")
-PHASE_07_DIR = os.path.join(DRIVE_PATH, "phase_07_feature_engineering")
-PHASE_08_DIR = os.path.join(DRIVE_PATH, "phase_08_model_training")
-PHASE_09_DIR = os.path.join(DRIVE_PATH, "phase_09_model_evaluation")
-PHASE_10_DIR = os.path.join(DRIVE_PATH, "phase_10_opinion_mining")
-PHASE_11_DIR = os.path.join(DRIVE_PATH, "phase_11_absa")
-PHASE_12_DIR = os.path.join(DRIVE_PATH, "phase_12_visualization")
-
-### 5. Create the Folders
-
-phase_directories = [
-    PHASE_01_DIR,
-    PHASE_02_DIR,
-    PHASE_03_DIR,
-    PHASE_04_DIR,
-    PHASE_05_DIR,
-    PHASE_06_DIR,
-    PHASE_07_DIR,
-    PHASE_08_DIR,
-    PHASE_09_DIR,
-    PHASE_10_DIR,
-    PHASE_11_DIR,
-    PHASE_12_DIR
-]
-
-for folder in phase_directories:
-    os.makedirs(folder, exist_ok=True)
-
-### 6. Run the Notebook
+### 4. Run the Notebook
 
 Run the notebook from top to bottom because later phases depend on files created by earlier phases.
 
